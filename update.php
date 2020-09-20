@@ -9,11 +9,12 @@
   }
 
   $article = array(
-    'title' => 'DRAMA',
+    'title' => 'D R A M A',
     'description' => 'What is your favorite drama?'
   );
 
 if(isset($_GET['id']) ){
+  $filtered_id = mysqli_real_escape_string($link, $_GET['id']);
   $query = "SELECT * FROM drama WHERE id={$_GET['id']}";
   $result = mysqli_query($link, $query);
   $row = mysqli_fetch_array($result);
@@ -28,14 +29,17 @@ if(isset($_GET['id']) ){
 <html>
 <head>
   <meta charset="utf-8">
-  <title> DRAMA </title>
+  <title> MY FAVORITE DRAMA </title>
 </head>
 <body>
-  <h1>DRAMA</H1>
+  <h1><a href="index.php">MY FAVORITE DRAMA</a></H1>
   <ol><?= $list ?></ol>
-  <form action="process_create.php" method="post">
-    <p><input type="text" name="title" placeholder="title"></p>
-    <p><textarea name="description" placeholder="description"></textarea></p>
+  <form action="process_update.php" method="POST">
+    <input type="hidden" name="id" value="<?=$filtered_id?>">
+    <p><input type="text" name="title" placeholder="title"
+    value="<?=$article['title']?>"></p>
+    <p><textarea name="description"
+    placeholder="description"><?=$article['description']?></textarea></p>
     <p><input type="submit"></p>
   </form>
 </body>
