@@ -7,26 +7,25 @@
         echo mysqli_connect_error();
         exit();
     }
-
     $query="
-             select e.emp_no, e.first_name, s.salary, e.gender
-              from employees e
-              inner join salaries s on e.emp_no=s.emp_no
-              order by salary desc limit 20 
+        SELECT  d.dept_no, dp.dept_name, e.first_name,e.emp_no FROM employees e 
+        INNER JOIN dept_manager d ON e.emp_no=d.emp_no
+        INNER JOIN departments dp ON d.dept_no=dp.dept_no
+        ORDER BY dept_no
         ";
 
     $article="";
 
     $result = mysqli_query($link, $query);
     while($row=mysqli_fetch_array($result)){
-        $article .= '<tr><td>';
-        $article .= $row['emp_no'];
+        $article .= '<tㄱ><td>';
+        $article .= $row['dept_no'];
+        $article .= '</td><td>';
+        $article .= $row['dept_name'];
         $article .= '</td><td>';
         $article .= $row['first_name'];
         $article .= '</td><td>';
-        $article .= $row['salary'];
-        $article .= '</td><td>';
-        $article .= $row['gender'];
+        $article .= $row['emp_no'];
         $article .= '</td></tr>';
 
     }
@@ -40,7 +39,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> 연봉 TOP20  </title>
+    <title> 부서별 담당자 정보 </title>
     <style>
         body{
             font-family: Consolas, monospace;
@@ -56,13 +55,13 @@
     </style>
 </head>
 <body>
-    <h2><a href="index.php"> 직원 관리 시스템</a> | 연봉 정보 </h2>
+    <h2><a href="index.php"> 직원 관리 시스템</a> | 부서별 담당자 정보 </h2>
     <table>
         <tr>
-            <th>empno</th>
-            <th>first_name</th>
-            <th>salary</th>
-            <th>gender</th>
+            <th>부서 번호</th>
+            <th>부서명</th>
+            <th>담당자 이름</th>
+            <th>직원 번호</th>
         </tr>
         <?= $article ?>
 
