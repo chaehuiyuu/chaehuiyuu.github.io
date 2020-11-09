@@ -32,7 +32,10 @@ git에 commit 하려는데 origin이 이미 존재한다는 오류가 발생했�
 ###### $ git remote add origin https://github.com/chaehuiyuu/ych_dbp.git)   
 
 하지만 계속 실행이 안됐고 검색을 하다가 로컬과 원격을 맞춰줘야한다는 걸 알았다.  
-그래서 다음 코드로 실행시키고 push 하였더니 올바르게 올라갔다
+그래서 다음 코드로 실행시키고 push 하였더니 올바르게 올라갔다   
+
+
+https://m.blog.naver.com/dorje5/221974752747
 
 ###### $git pull one master --allow-unrelated-histories
 
