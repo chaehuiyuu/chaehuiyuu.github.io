@@ -6,8 +6,8 @@ https://youtu.be/ZUp18Gvq92c
 
 ### 새로 배운 내용
 
-SQL : 관계형DB --> table을 이용하여 구축, primary key 존재
-NoSQL : 관계형X --> document를 이용하여 구축, {key:value}
+SQL : 관계형DB --> table을 이용하여 구축, primary key 존재    
+NoSQL : 관계형X --> document를 이용하여 구축, {key:value}    
  ->> 안정성이 떨어지지만 확장성, 성능이 향상, 빠른 속도를 강조
 
  ##### MongoDB
