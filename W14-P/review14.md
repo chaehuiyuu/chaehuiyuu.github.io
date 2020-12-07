@@ -2,6 +2,7 @@
 
 ### 실습 동영상
 
+https://youtu.be/ZUp18Gvq92c
 
 ### 새로 배운 내용
 
