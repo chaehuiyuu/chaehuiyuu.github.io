@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>데베플 기말과제</title>
+	<style>
+
+
+
+	</style>
+</head>
+<body>
+	<h1>전국 공공 화장실 찾기👍</h1>
+<div id="menu_wrapper">
+	<li><a href="publicWC.php">공중화장실찾기</a></li>
+	<li><a href="openWC.php">개방화장실찾기</a></li>
+  <li><a href="SeoulWC.php">서울공공화장실찾기</a></li>
+    <li>검색</li>
+    <form action="toiletSearch.php" method="GET">
+            &nbsp; &nbsp;
+            <select name = "category">
+                <option value="구분">구분</option>
+                <option value="화장실명">화장실명</option>
+                <option value="소재지도로명주소">도로명주소</option>
+                <option value="소재지지번주소">지번주소</option>
+            </select>
+            <input type="text" name="content" placeholder="내용">
+            <input type="submit" value="찾기">
+    </form>
+	<li><a href="index.php">화장실 이용 후기 게시판</a></li>
+
+</div>
+
+</body>
+</html>
