@@ -23,15 +23,15 @@
     $result = mysqli_query($conn, $query);
     $toilet_info = '';
     while($row = mysqli_fetch_array($result)){
-        $emp_info .= '<tr>';
-        $emp_info .= '<td width="80">'.$row['구분'].'</td>';
-        $emp_info .= '<td width="120">'.$row['화장실명'].'</td>';
-        $emp_info .= '<td width="200">'.$row['소재지도로명주소'].'</td>';
-        $emp_info .= '<td width="200">'.$row['소재지지번주소'].'</td>';
-        $emp_info .= '<td>'.$row['남녀공용화장실여부'].'</td>';
-        $emp_info .= '<td width="200">'.$row['개방시간'].'</td>';
-        $emp_info .= '<td>'.$row['전화번호'].'</td>';
-        $emp_info .= '</tr>';
+        $toilet_info .= '<tr>';
+        $toilet_info .= '<td width="80">'.$row['구분'].'</td>';
+        $toilet_info .= '<td width="120">'.$row['화장실명'].'</td>';
+        $toilet_info .= '<td width="200">'.$row['소재지도로명주소'].'</td>';
+        $toilet_info .= '<td width="200">'.$row['소재지지번주소'].'</td>';
+        $toilet_info .= '<td>'.$row['남녀공용화장실여부'].'</td>';
+        $toilet_info .= '<td width="200">'.$row['개방시간'].'</td>';
+        $toilet_info .= '<td>'.$row['전화번호'].'</td>';
+        $toilet_info .= '</tr>';
     }
 
     mysqli_free_result($result);
@@ -64,7 +64,7 @@
             <th>개방시간</th>
             <th>전화번호</th>
         </tr>
-        <?=$emp_info?>
+        <?=$toilet_info?>
     </table>
 </body>
 
