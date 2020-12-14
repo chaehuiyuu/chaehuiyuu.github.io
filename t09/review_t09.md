@@ -1,6 +1,13 @@
 # 기말 대체 과제 : 전국 공공 화장실 찾기    
 <img width="446" alt="홈화면" src="https://user-images.githubusercontent.com/70579620/102014111-a60a9700-3d97-11eb-8063-57d60a3cde92.PNG">   
 
+## 역할분담   
+  + 김은지 : 서버 호스팅, 공공데이터 csv파일 DB서버에 삽입, 테이블 설계 및 생성
+  + 류난영 : 소개 자료 작성
+  + 송세정
+  + 유채희 : 서울시 화장실 찾기 메뉴 구현, 소개 자료 작성
+  + 이지민 : 후기 게시판 구현
+
 ## 홈페이지 주소     
   http://dbp2020.dothome.co.kr/    
 ## 구축환경    
@@ -55,7 +62,7 @@ SELECT * FROM `public_toilet` WHERE `소재지도로명주소` LIKE '%서울특�
 ```sql
 SELECT * FROM public_toilet WHERE `{$filtered_category}` LIKE '%{$filtered_content}%'
 ```    
-구분에서 '화장실명', '도로명주소', '지번주소' 중 하나를 선택하여 검색어를 입력하면 해당하는 정보를 출력한다.    
+'구분','화장실명', '도로명주소', '지번주소' 네 개의 목록 중 하나를 선택하고 검색어를 입력하면 그에 해당하는 정보가 출력된다.    
 
 ### 5. 후기 게시판    
 
